@@ -80,7 +80,6 @@ docker exec -it mysql_dmq mysql -u user_dmq -p
 
 ### Eliminar Todo (Incluidos los Volúmenes)
 ```bash
-docker-compose down -v
 docker network rm dmq_th_net
 ```
 
