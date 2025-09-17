@@ -1,0 +1,21 @@
+# MySQL
+
+docker run -d \
+  --name mysql_server_control_asistencia \
+  --network dmq_th_net \
+  --env-file .env \
+  -v mysql_data:/var/lib/mysql \
+  -v "$PWD"/init.sql:/docker-entrypoint-initdb.d/init.sql \
+  -p 3306:3306 \
+  mysql:9.4
+
+
+# phpMyAdmin
+
+docker run -d \
+  --name phpmyadmin_control \
+  --network dmq_th_net \
+  --env-file .env \
+  -e PMA_HOST=mysql_server_control_asistencia \
+  -p 8080:80 \
+  phpmyadmin:5.2
