@@ -85,21 +85,6 @@ docker-compose down -v
 docker network rm dmq_th_net
 ```
 
-## 🚨 Troubleshooting
-
-### Problemas Comunes
-
-1. **Puerto 3306 ya en uso**
-   - Verifica si hay otra instancia de MySQL ejecutándose
-   - Cambia el puerto en el docker-compose: `"3307:3306"`
-
-2. **Puerto 8080 ya en uso**
-   - Cambia el puerto de phpMyAdmin: `"8081:80"`
-
-3. **No se puede conectar a phpMyAdmin**
-   - Verifica que ambos contenedores estén en la misma red
-   - Confirma que MySQL esté completamente iniciado antes de phpMyAdmin
-
 ### Verificar Conectividad de Red
 ```bash
 docker network inspect dmq_th_net
