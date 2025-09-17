@@ -1,11 +1,10 @@
 # Docker MySQL + phpMyAdmin Setup
 
-Este proyecto contiene la configuración para desplegar una base de datos MySQL junto con phpMyAdmin utilizando Docker y Docker Compose.
+Este proyecto contiene la configuración para desplegar una base de datos MySQL junto con phpMyAdmin utilizando Docker 
 
 ## 📋 Requisitos
 
 - Docker Engine
-- Docker Compose
 - Navegador web
 
 ## 🚀 Instalación y Configuración
