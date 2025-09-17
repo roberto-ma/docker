@@ -22,33 +22,8 @@ docker network create dmq_th_net
 
 Ejecuta el bloque de configuración de MySQL desde el archivo `despliegues.txt`:
 
-```yaml
-# MySQL
-version: '3.8'
-services:
-  mysql:
-    image: mysql:8.0
-    container_name: mysql_dmq
-    environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: dmq_database
-      MYSQL_USER: user_dmq
-      MYSQL_PASSWORD: usrdmq
-    ports:
-      - "3306:3306"
-    networks:
-      - dmq_th_net
-    volumes:
-      - mysql_data:/var/lib/mysql
-    restart: unless-stopped
+<img width="875" height="250" alt="image" src="https://github.com/user-attachments/assets/22097b22-2ec1-45ce-b636-cc08d23470bf" />
 
-volumes:
-  mysql_data:
-
-networks:
-  dmq_th_net:
-    external: true
-```
 
 ### 3. Desplegar phpMyAdmin
 
