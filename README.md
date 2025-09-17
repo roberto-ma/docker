@@ -60,21 +60,10 @@ docker ps -a
    - Contraseña: `usrdmq`
 4. Deberías poder acceder al panel de phpMyAdmin
 
-## 📁 Estructura del Proyecto
+   <img width="886" height="890" alt="image" src="https://github.com/user-attachments/assets/12ff8926-1a63-4655-b225-d0e2a4668481" />
 
-```
-proyecto/
-├── despliegues.txt          # Archivo con las configuraciones Docker Compose
-├── README.md               # Este archivo
-└── docker-compose.yml     # (Opcional) Archivo combinado de ambos servicios
-```
+   <img width="886" height="906" alt="image" src="https://github.com/user-attachments/assets/80d54e09-2fa8-41bc-b562-07ee6c7dffb6" />
 
-## 🔧 Comandos Útiles
-
-### Detener los Contenedores
-```bash
-docker-compose down
-```
 
 ### Ver Logs de los Contenedores
 ```bash
@@ -120,12 +109,4 @@ docker network inspect dmq_th_net
 
 - Los datos de MySQL se persisten en un volumen Docker llamado `mysql_data`
 - La red `dmq_th_net` permite la comunicación entre los contenedores
-- Los contenedores se reiniciarán automáticamente a menos que se detengan manualmente
 
-## 🤝 Contribuciones
-
-Si encuentras algún problema o tienes sugerencias de mejora, por favor crea un issue o envía un pull request.
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
