@@ -28,31 +28,9 @@ Ejecuta el bloque de configuración de MySQL desde el archivo `despliegues.txt`:
 ### 3. Desplegar phpMyAdmin
 
 Ejecuta el bloque de configuración de phpMyAdmin desde el archivo `despliegues.txt`:
+<img width="886" height="715" alt="image" src="https://github.com/user-attachments/assets/40103be2-ebd9-49dc-b016-2ce4302710cc" />
 
-```yaml
-# phpMyAdmin
-version: '3.8'
-services:
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin_dmq
-    environment:
-      PMA_HOST: mysql_dmq
-      PMA_PORT: 3306
-      PMA_USER: user_dmq
-      PMA_PASSWORD: usrdmq
-    ports:
-      - "8080:80"
-    networks:
-      - dmq_th_net
-    depends_on:
-      - mysql
-    restart: unless-stopped
 
-networks:
-  dmq_th_net:
-    external: true
-```
 
 ### 4. Verificar el Estado de los Contenedores
 
@@ -61,14 +39,9 @@ Para verificar que todos los contenedores estén ejecutándose correctamente:
 ```bash
 docker ps -a
 ```
+<img width="886" height="50" alt="image" src="https://github.com/user-attachments/assets/dd337639-c1f8-4a8a-9f31-a7bc62b98295" />
 
-Deberías ver algo similar a:
 
-```
-CONTAINER ID   IMAGE                          COMMAND                  CREATED          STATUS          PORTS                                                  NAMES
-abc123def456   phpmyadmin/phpmyadmin:latest   "/docker-entrypoint.…"   2 minutes ago    Up 2 minutes    0.0.0.0:8080->80/tcp                                   phpmyadmin_dmq
-789ghi012jkl   mysql:8.0                      "docker-entrypoint.s…"   3 minutes ago    Up 3 minutes    0.0.0.0:3306->3306/tcp, 33060/tcp                     mysql_dmq
-```
 
 ## 🌐 Acceso a phpMyAdmin
 
