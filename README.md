@@ -56,7 +56,7 @@ docker ps -a
 2. Navega a `http://localhost:8080`
 3. Ingresa las credenciales:
    - Usuario: `user_dmq`
-   - Contraseña: `usrdmq`
+   - Contraseña: `usrdmq.`
 4. Deberías poder acceder al panel de phpMyAdmin
 
    <img width="886" height="890" alt="image" src="https://github.com/user-attachments/assets/12ff8926-1a63-4655-b225-d0e2a4668481" />
