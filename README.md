@@ -48,7 +48,7 @@ docker ps -a
 
 - **URL**: http://localhost:8080
 - **Usuario**: `user_dmq`
-- **Contraseña**: `usrdmq`
+- **Contraseña**: `usrdmq.`
 
 ### Verificación en el Navegador
 
